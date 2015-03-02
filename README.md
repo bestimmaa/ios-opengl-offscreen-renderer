@@ -1,10 +1,5 @@
-# Texture each side of a cube with a single texture file
-### A demo implemented on iOS using OpenGL ES 2.0 and GLKit Framework
+# Offscreen Rendering with OpenGL ES and GLKit on iOS
 
-The basic idea is to use this single texture:
-
-![texture image](https://github.com/bestimmaa/ios-texture-cube/blob/master/src/texture-coordinates/texture-coordinates/texture_numbers.png)
-
-to texture each side of the cube:
+Render a UIImage using OpenGL ES without displaying it on screen. All the rendering is done in the OffscreenRenderer class which has a UIImage property to obtain the rendered image.
 
 ![rotating cube gif](https://github.com/bestimmaa/ios-texture-cube/blob/master/cube.gif)
