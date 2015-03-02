@@ -17,6 +17,7 @@
 		2F3BAE1F1AA275E70040DDC4 /* texture_numbers.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F3BAE1E1AA275E70040DDC4 /* texture_numbers.png */; };
 		2F3BAE211AA275F40040DDC4 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3BAE201AA275F40040DDC4 /* GLKit.framework */; };
 		2F3BAE241AA276020040DDC4 /* Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BAE231AA276020040DDC4 /* Geometry.m */; };
+		2F92B4D61AA4F71F00081DA3 /* OffscreenRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F92B4D51AA4F71F00081DA3 /* OffscreenRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		2F3BAE201AA275F40040DDC4 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		2F3BAE221AA276020040DDC4 /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 		2F3BAE231AA276020040DDC4 /* Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geometry.m; sourceTree = "<group>"; };
+		2F92B4D41AA4F71F00081DA3 /* OffscreenRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffscreenRenderer.h; sourceTree = "<group>"; };
+		2F92B4D51AA4F71F00081DA3 /* OffscreenRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffscreenRenderer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 		2F3BADF71AA275910040DDC4 /* texture-coordinates */ = {
 			isa = PBXGroup;
 			children = (
+				2F92B4D41AA4F71F00081DA3 /* OffscreenRenderer.h */,
+				2F92B4D51AA4F71F00081DA3 /* OffscreenRenderer.m */,
 				2F3BAE221AA276020040DDC4 /* Geometry.h */,
 				2F3BAE231AA276020040DDC4 /* Geometry.m */,
 				2F3BAE1E1AA275E70040DDC4 /* texture_numbers.png */,
@@ -236,6 +241,7 @@
 				2F3BAE241AA276020040DDC4 /* Geometry.m in Sources */,
 				2F3BADFE1AA275910040DDC4 /* AppDelegate.m in Sources */,
 				2F3BADFB1AA275910040DDC4 /* main.m in Sources */,
+				2F92B4D61AA4F71F00081DA3 /* OffscreenRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +434,7 @@
 				2F3BAE1A1AA275910040DDC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F3BAE1B1AA275910040DDC4 /* Build configuration list for PBXNativeTarget "texture-coordinatesTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +443,7 @@
 				2F3BAE1D1AA275910040DDC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
