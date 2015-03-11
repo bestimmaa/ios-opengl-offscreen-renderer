@@ -174,15 +174,16 @@
     glBindVertexArrayOES(0);
     
     // Create Framebuffer for multisampling
-    
     glGenFramebuffers(1, &_multisamplingFrameBuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, _multisamplingFrameBuffer);
-    
+
+    // create a render buffer for color
     glGenRenderbuffers(1, &_multisamplingColorRenderbuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _multisamplingColorRenderbuffer);
     glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER, 4, GL_RGBA8_OES, _width, _height);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _multisamplingColorRenderbuffer);
-    
+
+    // create a render buffer for the depth-buffer. this is needed for the framebuffer to depth test when rendering
     glGenRenderbuffers(1, &_multisamplingDepthRenderbuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _multisamplingDepthRenderbuffer);
     glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER, 4, GL_DEPTH_COMPONENT16, _width, _height);
@@ -197,12 +198,16 @@
     // Create framebuffer for resolving the image
     glGenFramebuffers(1, &_resolveFrameBuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, _resolveFrameBuffer);
-    
+
+    // Create a renderbuffer object. A renderbuffer is optimized to store images.
+    // https://www.opengl.org/wiki/Renderbuffer_Object
     glGenRenderbuffers(1, &_resolveColorRenderbuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _resolveColorRenderbuffer);
     glRenderbufferStorage(GL_RENDERBUFFER, GL_RGB8_OES, _width, _height);
+    //  attach the renderbuffer object to the framebuffer object
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _resolveColorRenderbuffer);
-    
+
+    // check for errors
     status = glCheckFramebufferStatus(GL_FRAMEBUFFER) ;
     if(status != GL_FRAMEBUFFER_COMPLETE) {
         NSLog(@"failed to make complete resolve framebuffer object %x", status);
@@ -227,28 +232,29 @@
     if (!_initialized) {
         return nil;
     }
-    
+    // update rotation of the rendered cube at random and setup the projection matrix
     [self update];
-    
+
+
     [self draw];
     
     NSInteger x = 0, y = 0;
-    NSInteger dataLength = _width * _height * 4;
+    NSInteger dataLength = self.width * self.height * 4;
     GLubyte *data = (GLubyte*)malloc(dataLength * sizeof(GLubyte));
     
     glBindFramebuffer(GL_FRAMEBUFFER, _resolveFrameBuffer);
     glPixelStorei(GL_PACK_ALIGNMENT, 4);
-    glReadPixels(x, y, _width, _height, GL_RGBA, GL_UNSIGNED_BYTE, data);
+    glReadPixels(x, y, self.width, self.height, GL_RGBA, GL_UNSIGNED_BYTE, data);
     
     CGDataProviderRef ref = CGDataProviderCreateWithData(NULL, data, dataLength, NULL);
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
-    CGImageRef iref = CGImageCreate(_width, _height, 8, 32, _width * 4, colorspace, kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast,
+    CGImageRef iref = CGImageCreate(self.width, self.height, 8, 32, self.height * 4, colorspace, kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast,
                                     ref, NULL, true, kCGRenderingIntentDefault);
     
     UIGraphicsBeginImageContext(CGSizeMake(_width, _height));
     CGContextRef cgcontext = UIGraphicsGetCurrentContext();
     CGContextSetBlendMode(cgcontext, kCGBlendModeCopy);
-    CGContextDrawImage(cgcontext, CGRectMake(0.0, 0.0, _width, _height), iref);
+    CGContextDrawImage(cgcontext, CGRectMake(0.0, 0.0, self.width, self.height), iref);
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -290,10 +296,13 @@
     glBindVertexArrayOES(_vertexArray);
     [self prepareEffectWithModelMatrix:self.modelMatrix viewMatrix:self.viewMatrix projectionMatrix:self.projectionMatrix];
     glDrawElements(GL_TRIANGLES, sizeof(IndicesTrianglesCube) / sizeof(IndicesTrianglesCube[0]), GL_UNSIGNED_BYTE, 0);
+
+    // Multisampling
     glBindFramebuffer(GL_DRAW_FRAMEBUFFER_APPLE, _resolveFrameBuffer);
     glBindFramebuffer(GL_READ_FRAMEBUFFER_APPLE, _multisamplingFrameBuffer);
     glResolveMultisampleFramebufferAPPLE();
-    
+
+    // discard the frame buffer and its attached render buffers
     const GLenum discards[]  = {GL_COLOR_ATTACHMENT0,GL_DEPTH_ATTACHMENT};
     glDiscardFramebufferEXT(GL_READ_FRAMEBUFFER_APPLE,2,discards);
     
