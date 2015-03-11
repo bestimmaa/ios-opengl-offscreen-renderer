@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:texture-coordinates.xcodeproj">
+      location = "self:glkit-offscreen-rendering.xcodeproj">
    </FileRef>
 </Workspace>

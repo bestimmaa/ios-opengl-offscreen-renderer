@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2F3BADF41AA275910040DDC4"
-               BuildableName = "texture-coordinates.app"
-               BlueprintName = "texture-coordinates"
-               ReferencedContainer = "container:texture-coordinates.xcodeproj">
+               BuildableName = "glkit-offscreen-rendering.app"
+               BlueprintName = "glkit-offscreen-rendering"
+               ReferencedContainer = "container:glkit-offscreen-rendering.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2F3BAE0D1AA275910040DDC4"
-               BuildableName = "texture-coordinatesTests.xctest"
-               BlueprintName = "texture-coordinatesTests"
-               ReferencedContainer = "container:texture-coordinates.xcodeproj">
+               BuildableName = "glkit-offscreen-renderingTests.xctest"
+               BlueprintName = "glkit-offscreen-renderingTests"
+               ReferencedContainer = "container:glkit-offscreen-rendering.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2F3BAE0D1AA275910040DDC4"
-               BuildableName = "texture-coordinatesTests.xctest"
-               BlueprintName = "texture-coordinatesTests"
-               ReferencedContainer = "container:texture-coordinates.xcodeproj">
+               BuildableName = "glkit-offscreen-renderingTests.xctest"
+               BlueprintName = "glkit-offscreen-renderingTests"
+               ReferencedContainer = "container:glkit-offscreen-rendering.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F3BADF41AA275910040DDC4"
-            BuildableName = "texture-coordinates.app"
-            BlueprintName = "texture-coordinates"
-            ReferencedContainer = "container:texture-coordinates.xcodeproj">
+            BuildableName = "glkit-offscreen-rendering.app"
+            BlueprintName = "glkit-offscreen-rendering"
+            ReferencedContainer = "container:glkit-offscreen-rendering.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F3BADF41AA275910040DDC4"
-            BuildableName = "texture-coordinates.app"
-            BlueprintName = "texture-coordinates"
-            ReferencedContainer = "container:texture-coordinates.xcodeproj">
+            BuildableName = "glkit-offscreen-rendering.app"
+            BlueprintName = "glkit-offscreen-rendering"
+            ReferencedContainer = "container:glkit-offscreen-rendering.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F3BADF41AA275910040DDC4"
-            BuildableName = "texture-coordinates.app"
-            BlueprintName = "texture-coordinates"
-            ReferencedContainer = "container:texture-coordinates.xcodeproj">
+            BuildableName = "glkit-offscreen-rendering.app"
+            BlueprintName = "glkit-offscreen-rendering"
+            ReferencedContainer = "container:glkit-offscreen-rendering.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

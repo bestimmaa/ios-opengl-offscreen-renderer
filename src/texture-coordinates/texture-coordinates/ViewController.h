@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <GLKit/GLKit.h>
+#import "OffscreenRenderer.h"
 
-@interface ViewController : GLKViewController
-
-
+@interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet OffscreenRenderer *offscreenRenderer;
 @end
 

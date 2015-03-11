@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,8 +27,13 @@
                             <constraint firstAttribute="centerY" secondItem="0cz-iU-FN7" secondAttribute="centerY" id="SbU-1V-KXK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="0cz-iU-FN7" id="csm-ID-IEU"/>
+                        <outlet property="offscreenRenderer" destination="i8V-MR-L3N" id="P8u-8z-UuH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="i8V-MR-L3N" customClass="OffscreenRenderer"/>
             </objects>
         </scene>
     </scenes>

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface OffscreenRenderer : NSObject
-
+@property (readonly) UIImage* image;
+@property float width;
+@property float height;
 @end

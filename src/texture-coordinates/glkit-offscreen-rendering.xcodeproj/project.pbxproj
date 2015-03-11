@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F3BADF51AA275910040DDC4 /* texture-coordinates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "texture-coordinates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F3BADF51AA275910040DDC4 /* glkit-offscreen-rendering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "glkit-offscreen-rendering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3BADF91AA275910040DDC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F3BADFA1AA275910040DDC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F3BADFC1AA275910040DDC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		2F3BAE031AA275910040DDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F3BAE051AA275910040DDC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F3BAE081AA275910040DDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2F3BAE0E1AA275910040DDC4 /* texture-coordinatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "texture-coordinatesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F3BAE0E1AA275910040DDC4 /* glkit-offscreen-renderingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "glkit-offscreen-renderingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3BAE131AA275910040DDC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F3BAE141AA275910040DDC4 /* texture_coordinatesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = texture_coordinatesTests.m; sourceTree = "<group>"; };
 		2F3BAE1E1AA275E70040DDC4 /* texture_numbers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_numbers.png; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		2F3BADF61AA275910040DDC4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2F3BADF51AA275910040DDC4 /* texture-coordinates.app */,
-				2F3BAE0E1AA275910040DDC4 /* texture-coordinatesTests.xctest */,
+				2F3BADF51AA275910040DDC4 /* glkit-offscreen-rendering.app */,
+				2F3BAE0E1AA275910040DDC4 /* glkit-offscreen-renderingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2F3BADF41AA275910040DDC4 /* texture-coordinates */ = {
+		2F3BADF41AA275910040DDC4 /* glkit-offscreen-rendering */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F3BAE181AA275910040DDC4 /* Build configuration list for PBXNativeTarget "texture-coordinates" */;
+			buildConfigurationList = 2F3BAE181AA275910040DDC4 /* Build configuration list for PBXNativeTarget "glkit-offscreen-rendering" */;
 			buildPhases = (
 				2F3BADF11AA275910040DDC4 /* Sources */,
 				2F3BADF21AA275910040DDC4 /* Frameworks */,
@@ -151,14 +151,14 @@
 			);
 			dependencies = (
 			);
-			name = "texture-coordinates";
+			name = "glkit-offscreen-rendering";
 			productName = "texture-coordinates";
-			productReference = 2F3BADF51AA275910040DDC4 /* texture-coordinates.app */;
+			productReference = 2F3BADF51AA275910040DDC4 /* glkit-offscreen-rendering.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2F3BAE0D1AA275910040DDC4 /* texture-coordinatesTests */ = {
+		2F3BAE0D1AA275910040DDC4 /* glkit-offscreen-renderingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F3BAE1B1AA275910040DDC4 /* Build configuration list for PBXNativeTarget "texture-coordinatesTests" */;
+			buildConfigurationList = 2F3BAE1B1AA275910040DDC4 /* Build configuration list for PBXNativeTarget "glkit-offscreen-renderingTests" */;
 			buildPhases = (
 				2F3BAE0A1AA275910040DDC4 /* Sources */,
 				2F3BAE0B1AA275910040DDC4 /* Frameworks */,
@@ -169,9 +169,9 @@
 			dependencies = (
 				2F3BAE101AA275910040DDC4 /* PBXTargetDependency */,
 			);
-			name = "texture-coordinatesTests";
+			name = "glkit-offscreen-renderingTests";
 			productName = "texture-coordinatesTests";
-			productReference = 2F3BAE0E1AA275910040DDC4 /* texture-coordinatesTests.xctest */;
+			productReference = 2F3BAE0E1AA275910040DDC4 /* glkit-offscreen-renderingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +192,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2F3BADF01AA275910040DDC4 /* Build configuration list for PBXProject "texture-coordinates" */;
+			buildConfigurationList = 2F3BADF01AA275910040DDC4 /* Build configuration list for PBXProject "glkit-offscreen-rendering" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -205,8 +205,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F3BADF41AA275910040DDC4 /* texture-coordinates */,
-				2F3BAE0D1AA275910040DDC4 /* texture-coordinatesTests */,
+				2F3BADF41AA275910040DDC4 /* glkit-offscreen-rendering */,
+				2F3BAE0D1AA275910040DDC4 /* glkit-offscreen-renderingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,7 +258,7 @@
 /* Begin PBXTargetDependency section */
 		2F3BAE101AA275910040DDC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2F3BADF41AA275910040DDC4 /* texture-coordinates */;
+			target = 2F3BADF41AA275910040DDC4 /* glkit-offscreen-rendering */;
 			targetProxy = 2F3BAE0F1AA275910040DDC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -367,7 +367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "texture-coordinates/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "glkit-offscreen-rendering";
 			};
 			name = Debug;
 		};
@@ -377,7 +377,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "texture-coordinates/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "glkit-offscreen-rendering";
 			};
 			name = Release;
 		};
@@ -395,7 +395,7 @@
 				);
 				INFOPLIST_FILE = "texture-coordinatesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "glkit-offscreen-renderingTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/texture-coordinates.app/texture-coordinates";
 			};
 			name = Debug;
@@ -410,7 +410,7 @@
 				);
 				INFOPLIST_FILE = "texture-coordinatesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "glkit-offscreen-renderingTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/texture-coordinates.app/texture-coordinates";
 			};
 			name = Release;
@@ -418,7 +418,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F3BADF01AA275910040DDC4 /* Build configuration list for PBXProject "texture-coordinates" */ = {
+		2F3BADF01AA275910040DDC4 /* Build configuration list for PBXProject "glkit-offscreen-rendering" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2F3BAE161AA275910040DDC4 /* Debug */,
@@ -427,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F3BAE181AA275910040DDC4 /* Build configuration list for PBXNativeTarget "texture-coordinates" */ = {
+		2F3BAE181AA275910040DDC4 /* Build configuration list for PBXNativeTarget "glkit-offscreen-rendering" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2F3BAE191AA275910040DDC4 /* Debug */,
@@ -436,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F3BAE1B1AA275910040DDC4 /* Build configuration list for PBXNativeTarget "texture-coordinatesTests" */ = {
+		2F3BAE1B1AA275910040DDC4 /* Build configuration list for PBXNativeTarget "glkit-offscreen-renderingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2F3BAE1C1AA275910040DDC4 /* Debug */,
