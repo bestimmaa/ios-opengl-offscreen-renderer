@@ -13,4 +13,5 @@
 @property (readonly) UIImage* image;
 @property float width;
 @property float height;
+- (void)generateTexture;
 @end
